@@ -1,0 +1,67 @@
+# Large binary files
+*.raw
+*.bin
+*.dat
+
+# Simulation temporary files
+# PLECS
+*.plecs~
+*.plecs.autosave
+
+# LTspice
+*.log
+*.net
+*.op.raw
+
+# PSIM
+*.sch~
+
+# Uncompressed screenshots
+*.bmp
+*.tif
+*.tiff
+
+# Allow compressed images
+# *.png
+# *.jpg
+# *.jpeg
+
+# Measurement data - keep CSV, exclude large binary scope files
+*.wfm
+*.isf
+*.trc
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+.ipynb_checkpoints/
+
+# MATLAB
+*.asv
+*.slxc
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+.history/
