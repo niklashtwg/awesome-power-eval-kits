@@ -1,5 +1,5 @@
 Plecs {
-  Name          "synchronous_buck_converter"
+  Name          "ti_tps62932evm"
   Version       "4.7"
   CircuitModel  "ContStateSpace"
   StartTime     "0"
@@ -26,7 +26,7 @@ Plecs {
   InitializationCommands "% Plant parameters\nVdc = 24;\ncin_elko = 10e-6;\nES"
 "R_cin_elko= 7.5e-3;\ncin_cer = 100e-9\n\n\nVout= 5;\nIodc=1;\nCout_elko = 22e"
 "-6;\nESR_elko= 7.5e-3;\nCout_cer = 100e-9\n\nCout=2*Cout_elko+Cout_cer\nRc=ES"
-"R_elko/2\n\nL = 30e-6;\nRl= 50e-3;\nRload = 1000\n\nrdson_hs= 76e-3\nrdson_ls"
+"R_elko/2\n\nL = 10e-6;\nRl= 50e-3;\nRload = 1000\n\nrdson_hs= 76e-3\nrdson_ls"
 "= 32e-3\n\nfsw= 500e3;          % Switching frequency in Hz\ntd= 20e-9;      "
 "     % dead-time in s\n\n% Controller Design Inputs\nwc= 2*pi*fsw/10; \t\t% c"
 "rossover frequency target\nwl= wc/10;       \t\t% integral pole frequency\nph"
@@ -61,12 +61,12 @@ Plecs {
   ExternalModeSettings ""
   AlgebraicLoopMethod "1"
   AlgebraicLoopTolerance "1e-6"
-  ScriptsDialogGeometry "[3084 1135 802 520]"
+  ScriptsDialogGeometry "[3553 635 802 520]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [2673, 644; 3949, 1568]
-    ZoomFactor    1
-    SliderPosition [0, 0]
+    Location      [2561, 31; 3759, 1352]
+    ZoomFactor    2.21482
+    SliderPosition [193, 249]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -138,20 +138,19 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [675, 488; 1665, 1174]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAADKAAACk/wCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [3389, 31; 4654, 1371]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAADKAAAEp/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAApMAAABmAP///wAAAAMAAAMuAAAAdvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAAy4AAABQAP///wAAAxAAAAKTAAAA"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAABKcAAABmAP///wAAAAMAAATxAAAAdvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABPEAAABQAP///wAABCMAAASnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAAJAAAAZAAAAAgAAABkAAAABwAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAADAA"
-"AAZAAAAAIAAABkAAAAnQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAB5AAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALwAMAAAAEAAAAB"
+"gAAAGQAAAAHAAAAZAAAAAgAAABkAAAACQAAAGQAAATxAAAACwEAAAEAAAAAAAAAAAAAAABk/////w"
+"AAAIEAAAAAAAAACwAAAIMAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAA"
+"AAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAB"
+"AAAAAAAAAAAAAAABAAAAAAAAAnoAAAABAAAAAAAAA+gAAAAAJA=="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -287,7 +286,7 @@ Plecs {
       Type          DCVoltageSource
       Name          "V_dc"
       Show          off
-      Position      [120, 330]
+      Position      [120, 355]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -1398,7 +1397,7 @@ Plecs {
       Type          Capacitor
       Name          "Cout2"
       Show          off
-      Position      [330, 315]
+      Position      [330, 300]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -1417,10 +1416,10 @@ Plecs {
       Type          Resistor
       Name          "Rc_esr1"
       Show          off
-      Position      [330, 350]
-      Direction     up
-      Flipped       off
-      LabelPosition west
+      Position      [330, 335]
+      Direction     down
+      Flipped       on
+      LabelPosition east
       Parameter {
         Variable      "R"
         Value         "ESR_cin_elko"
@@ -1450,7 +1449,7 @@ Plecs {
       Type          Resistor
       Name          "Rc_esr2"
       Show          off
-      Position      [120, 275]
+      Position      [120, 285]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -1492,9 +1491,9 @@ Plecs {
       Name          "I"
       Show          on
       Position      [810, 410]
-      Direction     up
-      Flipped       on
-      LabelPosition west
+      Direction     down
+      Flipped       off
+      LabelPosition east
       Parameter {
         Variable      "DiscretizationBehavior"
         Value         "2"
@@ -1744,20 +1743,19 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [675, 488; 1665, 1174]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAADKAAACk/wCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [3761, 31; 5119, 1371]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAADKAAAEp/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAApMAAABmAP///wAAAAMAAAMuAAAAdvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAAy4AAABQAP///wAAAxAAAAKTAAAA"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAABKcAAABmAP///wAAAAMAAAVOAAAAdvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABU4AAABQAP///wAABIAAAASnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAAJAAAAZAAAAAgAAABkAAAABwAAAGQAAAAGAAAAZAAAAAUAAABkAAAABAAAAGQAAAADAA"
-"AAZAAAAAIAAABkAAAApwAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACDAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AAkAAAAAQAAAAAAAAPoAAAAACQ="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL8AMAAAAGAAAAB"
+"AAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAAAIAAAAZAAAAAkAAABkAAAFTgAAAAsBAAABAA"
+"AAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACDAAAAAQAAAAAAAABkAAAAAQAAAAAAAABkAAA"
+"AAQAAAAAAAABkAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAOfAAAAAQAAAAAAAAPoAAAAACQ="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -1931,6 +1929,81 @@ Plecs {
         Type          Input
         Position      [-15, 0]
         Direction     left
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc1"
+      Show          off
+      Position      [200, 545]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "V"
+        Value         "Vdc"
+        Show          on
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "Rc_esr3"
+      Show          off
+      Position      [245, 500]
+      Direction     right
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "R"
+        Value         "1e-3"
+        Show          on
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "Rc_esr4"
+      Show          off
+      Position      [300, 525]
+      Direction     up
+      Flipped       off
+      LabelPosition west
+      Parameter {
+        Variable      "R"
+        Value         "ESR_cin_elko"
+        Show          on
+      }
+    }
+    Component {
+      Type          CurrentSource
+      Name          "I1"
+      Show          on
+      Position      [360, 540]
+      Direction     up
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "DiscretizationBehavior"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "StateSpaceInlining"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc2"
+      Show          off
+      Position      [300, 570]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "V"
+        Value         "Vdc"
+        Show          on
       }
     }
     Connection {
@@ -2209,7 +2282,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Iodc"
       SrcTerminal   1
-      Points        [840, 410]
+      Points        [840, 425; 785, 425]
       DstComponent  "I"
       DstTerminal   3
     }
@@ -2346,6 +2419,51 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Display1"
       DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc1"
+      SrcTerminal   1
+      Points        [200, 500]
+      DstComponent  "Rc_esr3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Rc_esr3"
+      SrcTerminal   1
+      Points        [300, 500]
+      Branch {
+        DstComponent  "Rc_esr4"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [360, 500]
+        DstComponent  "I1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc2"
+      SrcTerminal   1
+      DstComponent  "Rc_esr4"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc1"
+      SrcTerminal   2
+      Points        [200, 590; 300, 590]
+      Branch {
+        Points        [360, 590]
+        DstComponent  "I1"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "V_dc2"
+        DstTerminal   2
+      }
     }
     Annotation {
       Name          "<html><body>\n<p align=\"center\">Synchronous buck conver"
