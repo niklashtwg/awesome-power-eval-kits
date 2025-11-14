@@ -1,0 +1,60 @@
+# YAML Schema for Power Electronics Evaluation Kits
+type: object
+properties:
+  ID:
+    type: string
+  Vendor:
+    type: string
+  Kit Part Number:
+    type: string
+
+  Kit URL:
+    type: string
+
+  Topology:
+    type: string
+
+  Isolated (Yes/No):
+    type: string
+
+  Vin Range:
+    type: string
+
+  Vout Range:
+    type: string
+
+  Pout Range:
+    type: string
+
+  Control Mode:
+    type: string
+
+  Switching Frequency (Fs):
+    type: string
+
+  Evaluation Board Number:
+    type: string
+
+  Primary Semiconductor Type(s):
+    type: string
+
+  Load Profile / Special Features:
+    type: string
+
+  Measurement Data Available (Yes/No):
+    type: string
+
+  Difficulty:
+    type: string
+
+  Application Domain:
+    type: string
+
+  Status:
+    type: string
+
+  Contributor:
+    type: string
+
+  Link to Analysis:
+    type: string
