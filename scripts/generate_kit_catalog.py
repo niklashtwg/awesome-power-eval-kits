@@ -205,6 +205,37 @@ def generate_catalog_section(kits: List[Dict]) -> str:
     return '\n'.join(lines)
 
 
+def insert_into_readme(section_path: Path, readme_path: Path) -> bool:
+    """Insert catalog section into README.md."""
+    import re
+    
+    # Read the catalog section
+    with open(section_path, 'r', encoding='utf-8') as f:
+        catalog_content = f.read().strip()
+    
+    # Read the README
+    with open(readme_path, 'r', encoding='utf-8') as f:
+        readme_content = f.read()
+    
+    # Pattern to match Kit Catalog section
+    pattern = r'(---\s*\n\s*)## Kit Catalog.*?(?=\n---|\n## |\Z)'
+    
+    # Create replacement
+    replacement = r'\1' + catalog_content + '\n\n'
+    
+    # Perform replacement
+    new_content, count = re.subn(pattern, replacement, readme_content, flags=re.DOTALL)
+    
+    if count == 0:
+        return False
+    
+    # Write back
+    with open(readme_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+    
+    return True
+
+
 def main():
     """Main execution function."""
     # Define paths
@@ -213,6 +244,7 @@ def main():
     yaml_path = repo_root / 'kits' / 'kits_catalog.yml'
     table_output = repo_root / 'kits' / 'kits_catalog.md'
     section_output = repo_root / 'kits' / 'kit_catalog_section.md'
+    readme_path = repo_root / 'README.md'
     
     print(f"Reading catalog from: {yaml_path}")
     
@@ -234,9 +266,17 @@ def main():
         f.write(section_md)
     print(f"Written: {section_output}")
     
-    print("\nDone! You can now include these files in your README.md")
+    # Insert into README
+    print("Updating README.md...")
+    if insert_into_readme(section_output, readme_path):
+        print(f"Updated: {readme_path}")
+    else:
+        print("Warning: Could not find Kit Catalog section in README.md")
+    
+    print("\nDone! Generated files:")
     print(f"  - Full table: {table_output.relative_to(repo_root)}")
     print(f"  - Section: {section_output.relative_to(repo_root)}")
+    print(f"  - Updated: {readme_path.relative_to(repo_root)}")
 
 
 if __name__ == '__main__':

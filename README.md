@@ -112,8 +112,6 @@ awesome-power-eval-kits/
 
 ---
 
----
-
 ## Getting Started
 
 ### For Instructors
@@ -223,11 +221,6 @@ We use a **fork-based workflow**. All work happens in your fork; submit a PR whe
 
 Browse available evaluation boards in `kits/`. See [kits/kits_catalog.md](kits/kits_catalog.md) for the complete table.
 
-> **📝 Note for Maintainers:** This section is auto-generated from `kits/kits_catalog.yml`. To update:
-> 1. Edit `kits/kits_catalog.yml`
-> 2. Run `python scripts/generate_kit_catalog.py` or `.\scripts\update_catalog.ps1`
-> 3. Commit all changes together
-
 ### Easy (Entry-Level)
 
 Non-isolated DC/DC and low-power offline boards.
@@ -274,6 +267,8 @@ kW-class boards with complex topologies (LLC, PSFB, bidirectional, PFC+LLC).
 - **LMG1210EVM-012** · half-bridge gan stage, up to 300 V DC bus → configurable, 10-100+ W (by design)
 
 > **Note:** Not all kits have folders yet. Contributions welcome! Use [`KIT_README_TEMPLATE.md`](templates/KIT_README_TEMPLATE.md) to add one.
+
+
 
 ---
 
