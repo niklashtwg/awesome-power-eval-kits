@@ -53,6 +53,12 @@ LM5176EVM-HP schematic provided in the Documentation  ...
 
 ![schematic](../media/LM5176_func_block_diagram.png)
 
+## 2.1 Buckmode
+
+![schematic](../media/Buckmode/schematic_b001.png)
+
+
+
 
 # 3. Stress & Margin Analysis
 
