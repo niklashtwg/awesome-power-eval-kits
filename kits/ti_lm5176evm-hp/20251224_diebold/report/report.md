@@ -39,7 +39,34 @@ Kit URL: "https://www.ti.com/tool/LM5176EVM-HP"
 | S3 DITHER | 1 | frequency dithering feature disabled | 
 | | 2 | frequency dithering feature enabled | 
 
+### 1.2.2 Switches
 
+Q1,Q2,Q3: [CSD18532Q5B 60-V N-Channel](../docs/BOM/Switches/csd18532q5b.pdf) 
+RDS(on) 3.3 mOhm @ VGS=4.5V and 2.5 mOhm @ VGS=10V
+
+Q5,Q7: [CSD17573Q5B 30-V N-Channel](../docs/BOM/Switches/csd17573q5b.pdf)
+RDS(on) 1.19 mOhm @ VGS=4.5V and 0.84 mOhm @ VGS=10V
+
+### 1.2.3 Inductors
+
+L1: [XAL1510-472MEB](../docs/BOM/Inductors/xal1510.pdf)
+DCR 3.35-3.8mOhm, SRF yp 12.7Mhz, Isat 39A, Irms 21-29A (rise 20-40C)
+
+
+**Berechnung der parasitären Kapazität $C_p$** 
+
+Die Kapazität wird aus der Resonanzbedingung abgeleitet:
+
+$$C_p = \frac{1}{(2\pi \cdot f_{SRF})^2 \cdot L}$$
+
+Parameter für XAL1510-472:
+* Induktivität ($L$): $4,7 \cdot 10^{-6}H$
+* Resonanzfrequenz ($f_{SRF}$):$12,7\text{ MHz}$
+
+**Rechnung:**
+$$C_p = \frac{1}{(2\pi \cdot 12,7 \cdot 10^6\text{ Hz})^2 \cdot 4,7 \cdot 10^{-6}\text{ H}} \approx 33,4\text{ pF}$$
+
+L1 Alternate part: [Würth Elektronik 74439370047](../docs/BOM/Inductors/74439370047.pdf)
 
 
 
