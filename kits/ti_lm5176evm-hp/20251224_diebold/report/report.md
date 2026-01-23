@@ -3,7 +3,7 @@ Kit URL: "https://www.ti.com/tool/LM5176EVM-HP"
 
 # 1. Documentation & Understanding
 
-[LM5176EVM-HP User Guide + BOM](../docs/snvu547.pdf) 
+[LM5176EVM-HP User Guide + BOM](../docs/LM5176EVM-HP.pdf) 
 
 [LM5176 (Logic) User Guide + BOM](../docs/lm5176.pdf)
 
@@ -68,7 +68,11 @@ $$C_p = \frac{1}{(2\pi \cdot 12,7 \cdot 10^6\text{ Hz})^2 \cdot 4,7 \cdot 10^{-6
 
 L1 Alternate part: [Würth Elektronik 74439370047](../docs/BOM/Inductors/74439370047.pdf)
 
+### 1.2.4 Capacitors
 
+C2,C3,C4,C5,C32,C33,C34: [GRM32ER71K475KE14L](../docs/BOM/Capacitors/GRM32ER71K475KE14-01.pdf)
+
+C6,C7,C8,C9,C10,C11: 
 
 # 2. Simulation Model
 

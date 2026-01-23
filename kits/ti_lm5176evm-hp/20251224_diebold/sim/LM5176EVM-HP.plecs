@@ -60,10 +60,10 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [937, 385; 2620, 1184]
+    Location      [773, 351; 2191, 1154]
     ZoomFactor    0.873846
-    SliderPosition [0, 0]
-    ShowBrowser   on
+    SliderPosition [1, 0]
+    ShowBrowser   off
     BrowserWidth  177
     Component {
       Type          DCVoltageSource
@@ -223,7 +223,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q1:  CSD18532Q5B1"
+      Name          "Q1"
       Show          on
       Position      [715, 270]
       Direction     up
@@ -276,7 +276,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q3:  CSD18532Q5B3"
+      Name          "Q3"
       Show          on
       Position      [715, 455]
       Direction     up
@@ -310,7 +310,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q5:  CSD18532Q5B4"
+      Name          "Q5"
       Show          on
       Position      [915, 270]
       Direction     up
@@ -344,7 +344,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q7:  CSD18532Q5B7"
+      Name          "Q7"
       Show          on
       Position      [915, 455]
       Direction     up
@@ -554,7 +554,7 @@ Plecs {
         Direction     right
       }
       TerminalNames { "m", "vo", "vo_sen" }
-      Location      [1546, 749; 2187, 1026]
+      Location      [474, 107; 1115, 384]
       ZoomFactor    1
       SliderPosition [0, 0]
       ShowBrowser   off
@@ -1998,22 +1998,22 @@ Plecs {
       Flipped       off
       LabelPosition south
       Probe {
-        Component     "Q1:  CSD18532Q5B1"
+        Component     "Q1"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q3:  CSD18532Q5B3"
+        Component     "Q3"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q5:  CSD18532Q5B4"
+        Component     "Q5"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q7:  CSD18532Q5B7"
+        Component     "Q7"
         Path          ""
         Signals       {"Device gate input"}
       }
@@ -2237,11 +2237,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [960, 450; 1529, 727]
+      Location      [943, 450; 1512, 727]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAAA+AP///wAAAjkAAAD5AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAAjkAAAD5AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2611,7 +2611,7 @@ Plecs {
                 }
                 Branch {
                   Points        [715, 165]
-                  DstComponent  "Q1:  CSD18532Q5B1"
+                  DstComponent  "Q1"
                   DstTerminal   1
                 }
               }
@@ -2693,7 +2693,7 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "Q1:  CSD18532Q5B1"
+      SrcComponent  "Q1"
       SrcTerminal   2
       Points        [715, 340]
       Branch {
@@ -2709,13 +2709,13 @@ Plecs {
         }
       }
       Branch {
-        DstComponent  "Q3:  CSD18532Q5B3"
+        DstComponent  "Q3"
         DstTerminal   1
       }
     }
     Connection {
       Type          Wire
-      SrcComponent  "Q5:  CSD18532Q5B4"
+      SrcComponent  "Q5"
       SrcTerminal   2
       Points        [915, 340]
       Branch {
@@ -2731,7 +2731,7 @@ Plecs {
         }
       }
       Branch {
-        DstComponent  "Q7:  CSD18532Q5B7"
+        DstComponent  "Q7"
         DstTerminal   1
       }
     }
@@ -2748,7 +2748,7 @@ Plecs {
         }
         Branch {
           Points        [915, 160]
-          DstComponent  "Q5:  CSD18532Q5B4"
+          DstComponent  "Q5"
           DstTerminal   1
         }
       }
@@ -2868,11 +2868,11 @@ Plecs {
       Points        [715, 520]
       Branch {
         Points        [915, 520]
-        DstComponent  "Q7:  CSD18532Q5B7"
+        DstComponent  "Q7"
         DstTerminal   2
       }
       Branch {
-        DstComponent  "Q3:  CSD18532Q5B3"
+        DstComponent  "Q3"
         DstTerminal   2
       }
     }
@@ -2970,28 +2970,28 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      DstComponent  "Q1:  CSD18532Q5B1"
+      DstComponent  "Q1"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      DstComponent  "Q3:  CSD18532Q5B3"
+      DstComponent  "Q3"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      DstComponent  "Q5:  CSD18532Q5B4"
+      DstComponent  "Q5"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      DstComponent  "Q7:  CSD18532Q5B7"
+      DstComponent  "Q7"
       DstTerminal   3
     }
     Connection {
@@ -3037,19 +3037,19 @@ Plecs {
       }
     }
     Connection {
+      Type          Wire
+      SrcComponent  "L1_DCR"
+      SrcTerminal   1
+      DstComponent  "L1"
+      DstTerminal   1
+    }
+    Connection {
       Type          Signal
       SrcComponent  "Duty Cycle"
       SrcTerminal   1
       Points        [1075, 80]
       DstComponent  "PWM\nGeneration"
       DstTerminal   2
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "L1_DCR"
-      SrcTerminal   1
-      DstComponent  "L1"
-      DstTerminal   1
     }
   }
 }

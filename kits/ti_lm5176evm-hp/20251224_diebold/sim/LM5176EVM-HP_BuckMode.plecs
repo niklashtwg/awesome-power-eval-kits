@@ -3,7 +3,7 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "1e-3"
+  TimeSpan      "100e-3"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-6"
@@ -59,10 +59,10 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [587, 721; 2270, 1240]
+    Location      [89, 224; 1466, 729]
     ZoomFactor    0.873846
-    SliderPosition [0, 0]
-    ShowBrowser   on
+    SliderPosition [29, 0]
+    ShowBrowser   off
     BrowserWidth  177
     Component {
       Type          DCVoltageSource
@@ -222,16 +222,16 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q1:  CSD18532Q5B1"
+      Name          "Q1"
       Show          on
-      Position      [715, 270]
+      Position      [725, 270]
       Direction     up
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Ron"
-        Value         "0"
-        Show          off
+        Value         "1"
+        Show          on
       }
       Parameter {
         Variable      "s_init"
@@ -245,12 +245,12 @@ Plecs {
       }
       Parameter {
         Variable      "Rth"
-        Value         "0"
-        Show          off
+        Value         "0.8"
+        Show          on
       }
       Parameter {
         Variable      "T_init"
-        Value         ""
+        Value         "60"
         Show          off
       }
     }
@@ -275,7 +275,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q3:  CSD18532Q5B3"
+      Name          "Q3"
       Show          on
       Position      [715, 415]
       Direction     up
@@ -309,7 +309,7 @@ Plecs {
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q5:  CSD18532Q5B4"
+      Name          "Q5"
       Show          on
       Position      [915, 270]
       Direction     up
@@ -317,8 +317,8 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Ron"
-        Value         "0"
-        Show          off
+        Value         "1"
+        Show          on
       }
       Parameter {
         Variable      "s_init"
@@ -332,18 +332,18 @@ Plecs {
       }
       Parameter {
         Variable      "Rth"
-        Value         "0"
-        Show          off
+        Value         "0.8"
+        Show          on
       }
       Parameter {
         Variable      "T_init"
-        Value         ""
+        Value         "60"
         Show          off
       }
     }
     Component {
       Type          MosfetWithDiode
-      Name          "Q7:  CSD18532Q5B7"
+      Name          "Q7"
       Show          on
       Position      [915, 415]
       Direction     up
@@ -2037,22 +2037,22 @@ Plecs {
       Flipped       off
       LabelPosition south
       Probe {
-        Component     "Q1:  CSD18532Q5B1"
+        Component     "Q1"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q3:  CSD18532Q5B3"
+        Component     "Q3"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q5:  CSD18532Q5B4"
+        Component     "Q5"
         Path          ""
         Signals       {"Device gate input"}
       }
       Probe {
-        Component     "Q7:  CSD18532Q5B7"
+        Component     "Q7"
         Path          ""
         Signals       {"Device gate input"}
       }
@@ -2065,17 +2065,17 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [1247, 289; 1908, 852]
+      Location      [851, 289; 1512, 852]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACF/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAcAA"
 "ACFwAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAJVAAAAwfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAAlUAAAA+AP///wAAApUAAAIXAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAAlUAAABCAP///wAAApUAAAIXAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
-"AA/UGJN0vGp/AAAAAQAv8AAAAAAAAA/8gAAAAAAAAC/wAAAAAAAAD/yAAAAAAAAAAAAAAAAAAAAQA"
-"AAAAAAAAAAv/AAAAAAAAA/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":73,\"Labels\":[],"
+"AA/UGJN0vGp/AAAAAQAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/"
+"gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":186,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABAAAAA"
 "AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABP/AAAAAAAAAAAAABAAAAAQAAAAABAAAAAQAAAAAAAA"
@@ -2085,7 +2085,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -2276,11 +2276,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [960, 450; 1348, 678]
+      Location      [662, 448; 1269, 791]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAAA+AP///wAAAYQAAADIAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAAl8AAAE7AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2565,6 +2565,241 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [870, 50]
+      Direction     down
+      Flipped       on
+      LabelPosition south
+      Location      [236, 345; 949, 658]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAAskAAAEdAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":129,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SwitchLossCalculator
+      Name          "Switch Loss\nCalculator"
+      Show          on
+      Position      [1105, 455]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "T_average"
+        Value         "0.01"
+        Show          off
+      }
+      Parameter {
+        Variable      "ConductionLoss"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchingLoss"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "TurnOnLoss"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "TurnOffLoss"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "TotalLoss"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "GroupTypes"
+        Value         "1"
+        Show          off
+      }
+      Probe {
+        Component     "Q1"
+        Path          ""
+        Signals       {}
+      }
+      Probe {
+        Component     "Q5"
+        Path          ""
+        Signals       {}
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope1"
+      Show          on
+      Position      [1235, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [436, 228; 1060, 618]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAAnAAAAFqAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":282,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "1"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          HeatSink
+      Name          "Heat Sink"
+      Show          on
+      Position      [790, 345]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-177, -117; 177, 117]
+      Parameter {
+        Variable      "Cth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          HeatPort
+        Position      [-75, -182]
+        Direction     up
+      }
+    }
+    Component {
+      Type          ThermalGround
+      Name          "Ground3"
+      Show          on
+      Position      [1005, 440]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+    }
+    Component {
+      Type          ConstantTemperature
+      Name          "Tconst"
+      Show          on
+      Position      [1035, 365]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "T"
+        Value         "60"
+        Show          off
+      }
+    }
+    Component {
+      Type          ThermalResistor
+      Name          "Rth"
+      Show          on
+      Position      [1005, 270]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Rth"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "C3"
@@ -2596,8 +2831,8 @@ Plecs {
                   DstTerminal   1
                 }
                 Branch {
-                  Points        [715, 165]
-                  DstComponent  "Q1:  CSD18532Q5B1"
+                  Points        [725, 165]
+                  DstComponent  "Q1"
                   DstTerminal   1
                 }
               }
@@ -2679,15 +2914,15 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "Q1:  CSD18532Q5B1"
+      SrcComponent  "Q1"
       SrcTerminal   2
-      Points        [715, 355]
+      Points        [725, 325; 715, 325; 715, 355]
       Branch {
         DstComponent  "L1"
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Q3:  CSD18532Q5B3"
+        DstComponent  "Q3"
         DstTerminal   1
       }
     }
@@ -2697,11 +2932,11 @@ Plecs {
       SrcTerminal   2
       Points        [915, 355]
       Branch {
-        DstComponent  "Q5:  CSD18532Q5B4"
+        DstComponent  "Q5"
         DstTerminal   2
       }
       Branch {
-        DstComponent  "Q7:  CSD18532Q5B7"
+        DstComponent  "Q7"
         DstTerminal   1
       }
     }
@@ -2718,7 +2953,7 @@ Plecs {
         }
         Branch {
           Points        [915, 160]
-          DstComponent  "Q5:  CSD18532Q5B4"
+          DstComponent  "Q5"
           DstTerminal   1
         }
       }
@@ -2838,20 +3073,13 @@ Plecs {
       Points        [715, 485]
       Branch {
         Points        [915, 485]
-        DstComponent  "Q7:  CSD18532Q5B7"
+        DstComponent  "Q7"
         DstTerminal   2
       }
       Branch {
-        DstComponent  "Q3:  CSD18532Q5B3"
+        DstComponent  "Q3"
         DstTerminal   2
       }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Voltage Controller"
-      SrcTerminal   1
-      DstComponent  "PWM\nGeneration"
-      DstTerminal   2
     }
     Connection {
       Type          Wire
@@ -2968,28 +3196,28 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      DstComponent  "Q1:  CSD18532Q5B1"
+      DstComponent  "Q1"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      DstComponent  "Q3:  CSD18532Q5B3"
+      DstComponent  "Q3"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      DstComponent  "Q5:  CSD18532Q5B4"
+      DstComponent  "Q5"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      DstComponent  "Q7:  CSD18532Q5B7"
+      DstComponent  "Q7"
       DstTerminal   3
     }
     Connection {
@@ -3013,6 +3241,51 @@ Plecs {
         DstComponent  "Goto1"
         DstTerminal   1
       }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Voltage Controller"
+      SrcTerminal   1
+      Points        [1070, 80]
+      Branch {
+        DstComponent  "PWM\nGeneration"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [1070, 50]
+        DstComponent  "Scope"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Switch Loss\nCalculator"
+      SrcTerminal   1
+      DstComponent  "Scope1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          HeatPipe
+      SrcComponent  "Rth"
+      SrcTerminal   1
+      DstComponent  "Heat Sink"
+      DstTerminal   1
+    }
+    Connection {
+      Type          HeatPipe
+      SrcComponent  "Tconst"
+      SrcTerminal   2
+      Points        [1035, 410; 1005, 410]
+      DstComponent  "Ground3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          HeatPipe
+      SrcComponent  "Tconst"
+      SrcTerminal   1
+      Points        [1035, 270]
+      DstComponent  "Rth"
+      DstTerminal   2
     }
   }
 }
