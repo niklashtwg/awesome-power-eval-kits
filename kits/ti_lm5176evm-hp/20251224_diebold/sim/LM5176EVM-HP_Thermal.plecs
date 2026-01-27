@@ -3,12 +3,12 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "0.025"
+  TimeSpan      "0.02"
   Timeout       ""
   Solver        "auto"
-  MaxStep       "1e-3"
+  MaxStep       "1e-9"
   InitStep      "-1"
-  FixedStep     "1e-3"
+  FixedStep     "1e-6"
   Refine        "1"
   ZCStepSize    "1e-9"
   RelTol        "1e-3"
@@ -62,9 +62,9 @@ Plecs {
   ScriptsDialogGeometry "[747 -704 454 272]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [163, 66; 1394, 869]
+    Location      [122, -914; 1634, -111]
     ZoomFactor    0.873846
-    SliderPosition [194, 0]
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  177
     Component {
@@ -591,7 +591,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [545, 270]
+      Position      [560, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -639,7 +639,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [845, 455]
+      Position      [795, 455]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -663,7 +663,7 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [845, 270]
+      Position      [795, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -750,7 +750,7 @@ Plecs {
       Type          Constant
       Name          "On"
       Show          on
-      Position      [685, 640]
+      Position      [640, 640]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -770,7 +770,7 @@ Plecs {
       Type          Constant
       Name          "Off"
       Show          on
-      Position      [685, 680]
+      Position      [640, 680]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -957,8 +957,8 @@ Plecs {
       Location      [480, 86; 1435, 808]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAA7sAAAK2AAAA"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABnfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1589,318 +1589,6 @@ Plecs {
       }
     }
     Component {
-      Type          Mosfet
-      Name          "Q1"
-      Show          on
-      Position      [715, 270]
-      Direction     up
-      Flipped       off
-      LabelPosition northNorthwest
-      Parameter {
-        Variable      "Ron"
-        Value         "Q1_Rdson"
-        Show          on
-      }
-      Parameter {
-        Variable      "s_init"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-    }
-    Component {
-      Type          Diode
-      Name          "Q1D"
-      Show          on
-      Position      [730, 270]
-      Direction     down
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Vf"
-        Value         "0.8"
-        Show          on
-      }
-      Parameter {
-        Variable      "Ron"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "SwitchModel"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "f_grid"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Mosfet
-      Name          "Q5"
-      Show          on
-      Position      [915, 270]
-      Direction     up
-      Flipped       off
-      LabelPosition northNorthwest
-      Parameter {
-        Variable      "Ron"
-        Value         "Q5_Rdson"
-        Show          on
-      }
-      Parameter {
-        Variable      "s_init"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-    }
-    Component {
-      Type          Diode
-      Name          "Q5D"
-      Show          on
-      Position      [930, 270]
-      Direction     down
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Vf"
-        Value         "0.8"
-        Show          on
-      }
-      Parameter {
-        Variable      "Ron"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "SwitchModel"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "f_grid"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Mosfet
-      Name          "Q3"
-      Show          on
-      Position      [715, 455]
-      Direction     up
-      Flipped       off
-      LabelPosition northNorthwest
-      Parameter {
-        Variable      "Ron"
-        Value         "Q1_Rdson"
-        Show          on
-      }
-      Parameter {
-        Variable      "s_init"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-    }
-    Component {
-      Type          Diode
-      Name          "Q3D"
-      Show          on
-      Position      [730, 455]
-      Direction     down
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Vf"
-        Value         "0.8"
-        Show          on
-      }
-      Parameter {
-        Variable      "Ron"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "SwitchModel"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "f_grid"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Mosfet
-      Name          "Q7"
-      Show          on
-      Position      [915, 455]
-      Direction     up
-      Flipped       off
-      LabelPosition northNorthwest
-      Parameter {
-        Variable      "Ron"
-        Value         "Q5_Rdson"
-        Show          on
-      }
-      Parameter {
-        Variable      "s_init"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-    }
-    Component {
-      Type          Diode
-      Name          "Q7D"
-      Show          on
-      Position      [930, 455]
-      Direction     down
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Vf"
-        Value         "0.8"
-        Show          on
-      }
-      Parameter {
-        Variable      "Ron"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "Rth"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "SwitchModel"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "f_grid"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
       Type          Goto
       Name          "Goto6"
       Show          off
@@ -2099,7 +1787,7 @@ Plecs {
       Type          Subsystem
       Name          "Calculations"
       Show          on
-      Position      [415, 365]
+      Position      [470, 375]
       Direction     up
       Flipped       off
       LabelPosition none
@@ -2367,7 +2055,7 @@ Plecs {
           Probe {
             Component     "Q1"
             Path          ""
-            Signals       {"MOSFET current", "MOSFET voltage"}
+            Signals       {"Device voltage", "Device current"}
           }
         }
         Component {
@@ -2474,7 +2162,7 @@ Plecs {
           Probe {
             Component     "Q3"
             Path          ""
-            Signals       {"MOSFET voltage", "MOSFET current"}
+            Signals       {"Device voltage", "Device current"}
           }
         }
         Component {
@@ -2515,7 +2203,7 @@ Plecs {
           TimeRange     "0.0"
           ScrollingMode "1"
           SingleTimeAxis "1"
-          Open          "1"
+          Open          "0"
           Ts            "-1"
           SampleLimit   "0"
           XAxisLabel    "Time / s"
@@ -2581,7 +2269,7 @@ Plecs {
           Probe {
             Component     "Q5"
             Path          ""
-            Signals       {"MOSFET voltage", "MOSFET current"}
+            Signals       {"Device voltage", "Device current"}
           }
         }
         Component {
@@ -2688,7 +2376,7 @@ Plecs {
           Probe {
             Component     "Q7"
             Path          ""
-            Signals       {"MOSFET voltage", "MOSFET current"}
+            Signals       {"Device voltage", "Device current"}
           }
         }
         Component {
@@ -2729,7 +2417,7 @@ Plecs {
           TimeRange     "0.0"
           ScrollingMode "1"
           SingleTimeAxis "1"
-          Open          "1"
+          Open          "0"
           Ts            "-1"
           SampleLimit   "0"
           XAxisLabel    "Time / s"
@@ -2860,6 +2548,54 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Goto
+          Name          "Goto12"
+          Show          off
+          Position      [630, 400]
+          Direction     left
+          Flipped       off
+          LabelPosition north
+          Parameter {
+            Variable      "Tag"
+            Value         "SW1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto13"
+          Show          off
+          Position      [630, 440]
+          Direction     left
+          Flipped       off
+          LabelPosition north
+          Parameter {
+            Variable      "Tag"
+            Value         "SW2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Source\nPower"
@@ -2970,36 +2706,6 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Demux"
-          SrcTerminal   2
-          Points        [715, 165]
-          Branch {
-            DstComponent  "Q1_V&A"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [715, 410]
-            DstComponent  "Mux"
-            DstTerminal   2
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Demux1"
-          SrcTerminal   2
-          Points        [700, 215]
-          Branch {
-            DstComponent  "Q3_V&A"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [700, 420]
-            DstComponent  "Mux"
-            DstTerminal   3
-          }
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "Demux2"
           SrcTerminal   2
           Points        [685, 265]
@@ -3024,8 +2730,14 @@ Plecs {
           }
           Branch {
             Points        [670, 440]
-            DstComponent  "Mux"
-            DstTerminal   5
+            Branch {
+              DstComponent  "Mux"
+              DstTerminal   5
+            }
+            Branch {
+              DstComponent  "Goto13"
+              DstTerminal   1
+            }
           }
         }
         Connection {
@@ -3101,6 +2813,43 @@ Plecs {
           SrcTerminal   1
           DstComponent  "Goto11"
           DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   2
+          Points        [715, 165]
+          Branch {
+            DstComponent  "Q1_V&A"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [715, 410]
+            DstComponent  "Mux"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux1"
+          SrcTerminal   2
+          Points        [700, 215]
+          Branch {
+            DstComponent  "Q3_V&A"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [700, 400]
+            Branch {
+              Points        [700, 420]
+              DstComponent  "Mux"
+              DstTerminal   3
+            }
+            Branch {
+              DstComponent  "Goto12"
+              DstTerminal   1
+            }
+          }
         }
       }
     }
@@ -3322,11 +3071,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [275, 91; 1230, 813]
+      Location      [270, 83; 1225, 805]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACtvwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAANQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAcAA"
-"ACtgAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABR/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAA1wAAAFQAAAO7AAABMQAAA7sAAAK2AAAA"
+"ACtgAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAIAAAO7AAABSvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA7sAAABCAP///wAAA7sAAAK2AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3340,7 +3089,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -3462,15 +3211,15 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [1145, 580]
+      Position      [1205, 585]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [404, 475; 1359, 1197]
+      Location      [281, 185; 1236, 907]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABCAP///wAAA7sAAAK2AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAAA+AP///wAAA7sAAAK2AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3481,7 +3230,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -3516,24 +3265,10 @@ Plecs {
       }
     }
     Component {
-      Type          PlecsProbe
-      Name          "Probe"
-      Show          on
-      Position      [1085, 580]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Probe {
-        Component     "I_L"
-        Path          ""
-        Signals       {"Measured current"}
-      }
-    }
-    Component {
       Type          Inductor
       Name          "L1"
       Show          on
-      Position      [775, 340]
+      Position      [785, 340]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -3560,6 +3295,354 @@ Plecs {
         Variable      "R"
         Value         "L1_DCR"
         Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [1150, 585]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From17"
+      Show          off
+      Position      [1105, 615]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "inductor_current"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From16"
+      Show          off
+      Position      [1070, 585]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "SW1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From18"
+      Show          off
+      Position      [1070, 555]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "SW2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ConstantTemperatureGnd
+      Name          "TconstG"
+      Show          on
+      Position      [855, 50]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "T"
+        Value         "25"
+        Show          on
+      }
+    }
+    Component {
+      Type          HeatSink
+      Name          "Heat Sink"
+      Show          on
+      Position      [825, 365]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Frame         [-137, -132; 137, 132]
+      Parameter {
+        Variable      "Cth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          HeatPort
+        Position      [105, -137]
+        Direction     up
+      }
+    }
+    Component {
+      Type          MosfetWithDiode
+      Name          "Q1"
+      Show          on
+      Position      [715, 270]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:CSD18532Q5B"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          MosfetWithDiode
+      Name          "Q3"
+      Show          on
+      Position      [715, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:CSD18532Q5B"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          MosfetWithDiode
+      Name          "Q5"
+      Show          on
+      Position      [915, 270]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:CSD18532Q5B"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          MosfetWithDiode
+      Name          "Q7"
+      Show          on
+      Position      [915, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         "file:CSD18532Q5B"
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Control/Delays/Turn-on Delay"
+      Name          "Turn-on Delay2"
+      Show          on
+      Position      [845, 270]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Parameter {
+        Variable      "DeadTimeSource"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_d"
+        Value         "6e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "Rounding"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-15, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [19, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-15, 5]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Control/Delays/Turn-on Delay"
+      Name          "Turn-on Delay3"
+      Show          on
+      Position      [845, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Parameter {
+        Variable      "DeadTimeSource"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_d"
+        Value         "6e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "Rounding"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-15, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [19, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-15, 5]
+        Direction     left
       }
     }
     Connection {
@@ -3593,16 +3676,9 @@ Plecs {
                   DstTerminal   1
                 }
                 Branch {
-                  Points        [715, 100; 715, 250]
-                  Branch {
-                    DstComponent  "Q1"
-                    DstTerminal   1
-                  }
-                  Branch {
-                    Points        [730, 250]
-                    DstComponent  "Q1D"
-                    DstTerminal   2
-                  }
+                  Points        [715, 100]
+                  DstComponent  "Q1"
+                  DstTerminal   1
                 }
               }
               Branch {
@@ -3638,16 +3714,9 @@ Plecs {
           DstTerminal   1
         }
         Branch {
-          Points        [915, 160; 915, 250]
-          Branch {
-            DstComponent  "Q5"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [930, 250]
-            DstComponent  "Q5D"
-            DstTerminal   2
-          }
+          Points        [915, 160]
+          DstComponent  "Q5"
+          DstTerminal   1
         }
       }
       Branch {
@@ -3721,13 +3790,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "From5"
-      SrcTerminal   1
-      DstComponent  "Q5"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "PWM\nGeneration"
       SrcTerminal   1
       DstComponent  "Goto5"
@@ -3738,13 +3800,6 @@ Plecs {
       SrcComponent  "On"
       SrcTerminal   1
       DstComponent  "Goto3"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Off"
-      SrcTerminal   1
-      DstComponent  "Goto4"
       DstTerminal   1
     }
     Connection {
@@ -4067,101 +4122,20 @@ Plecs {
       Branch {
         Points        [825, 520]
         Branch {
-          Points        [715, 520; 715, 475]
-          Branch {
-            DstComponent  "Q3"
-            DstTerminal   2
-          }
-          Branch {
-            Points        [730, 475]
-            DstComponent  "Q3D"
-            DstTerminal   1
-          }
+          Points        [715, 520]
+          DstComponent  "Q3"
+          DstTerminal   2
         }
         Branch {
-          Points        [915, 520; 915, 475]
-          Branch {
-            DstComponent  "Q7"
-            DstTerminal   2
-          }
-          Branch {
-            Points        [930, 475]
-            DstComponent  "Q7D"
-            DstTerminal   1
-          }
+          Points        [915, 520]
+          DstComponent  "Q7"
+          DstTerminal   2
         }
       }
       Branch {
         DstComponent  "R6"
         DstTerminal   2
       }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Q1"
-      SrcTerminal   2
-      Points        [715, 290]
-      Branch {
-        Points        [715, 340]
-        Branch {
-          DstComponent  "L1"
-          DstTerminal   1
-        }
-        Branch {
-          Points        [715, 435]
-          Branch {
-            DstComponent  "Q3"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [730, 435]
-            DstComponent  "Q3D"
-            DstTerminal   2
-          }
-        }
-      }
-      Branch {
-        Points        [730, 290]
-        DstComponent  "Q1D"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Q5"
-      SrcTerminal   2
-      Points        [915, 290]
-      Branch {
-        Points        [930, 290]
-        DstComponent  "Q5D"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [915, 340]
-        Branch {
-          DstComponent  "I_L"
-          DstTerminal   2
-        }
-        Branch {
-          Points        [915, 435]
-          Branch {
-            DstComponent  "Q7"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [930, 435]
-            DstComponent  "Q7D"
-            DstTerminal   2
-          }
-        }
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From4"
-      SrcTerminal   1
-      DstComponent  "Q7"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -4183,13 +4157,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Turn-on Delay"
       DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Turn-on Delay"
-      SrcTerminal   2
-      DstComponent  "Q1"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -4304,11 +4271,41 @@ Plecs {
       DstTerminal   5
     }
     Connection {
+      Type          Wire
+      SrcComponent  "L1"
+      SrcTerminal   2
+      DstComponent  "L1_DCR"
+      DstTerminal   2
+    }
+    Connection {
       Type          Signal
-      SrcComponent  "Probe"
+      SrcComponent  "Mux"
       SrcTerminal   1
       DstComponent  "Scope1"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From17"
+      SrcTerminal   1
+      Points        [1130, 615; 1130, 595]
+      DstComponent  "Mux"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From16"
+      SrcTerminal   1
+      DstComponent  "Mux"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From18"
+      SrcTerminal   1
+      Points        [1120, 555; 1120, 575]
+      DstComponent  "Mux"
+      DstTerminal   2
     }
     Connection {
       Type          Wire
@@ -4318,11 +4315,82 @@ Plecs {
       DstTerminal   1
     }
     Connection {
+      Type          Signal
+      SrcComponent  "Turn-on Delay"
+      SrcTerminal   2
+      DstComponent  "Q1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          HeatPipe
+      SrcComponent  "Heat Sink"
+      SrcTerminal   1
+      Points        [930, 30]
+      DstComponent  "TconstG"
+      DstTerminal   1
+    }
+    Connection {
       Type          Wire
       SrcComponent  "L1"
+      SrcTerminal   1
+      Points        [715, 340]
+      Branch {
+        DstComponent  "Q1"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Q3"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "I_L"
       SrcTerminal   2
-      DstComponent  "L1_DCR"
-      DstTerminal   2
+      Points        [915, 340]
+      Branch {
+        DstComponent  "Q5"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Q7"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From5"
+      SrcTerminal   1
+      DstComponent  "Turn-on Delay2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Turn-on Delay2"
+      SrcTerminal   2
+      DstComponent  "Q5"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From4"
+      SrcTerminal   1
+      DstComponent  "Turn-on Delay3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Turn-on Delay3"
+      SrcTerminal   2
+      DstComponent  "Q7"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Off"
+      SrcTerminal   1
+      DstComponent  "Goto4"
+      DstTerminal   1
     }
   }
 }

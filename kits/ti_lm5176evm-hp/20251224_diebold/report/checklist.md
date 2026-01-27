@@ -32,30 +32,30 @@ in a real setup.
 
 ## 2. Simulation model (PLECS / LTspice / other)
 
-- [ ] Rebuild the **exact topology** of the eval board:
+- [x ] Rebuild the **exact topology** of the eval board:
   - [x] Use correct Vin range, Vout, switching frequency
-  - [ ] Use realistic models for switches (Rds_on, Qg, parasitics if possible)
-  - [ ] Include approximate magnetics (L, turns ratio, leakage if known)
+  - [x] Use realistic models for switches (Rds_on, Qg, parasitics if possible)
+  - [x] Include approximate magnetics (L, turns ratio, leakage if known)
   - [x] Include output and input capacitors, ESR where relevant
 
-- [ ] Simulate at least these operating points:
-  - [ ] Vin_min, full load
-  - [ ] Vin_nominal, full load
-  - [ ] Vin_max, full load
-  - [ ] Vin_nominal, 50% load
-  - [ ] Vin_nominal, light load (if controller supports it)
+- [x] Simulate at least these operating points:
+  - [x] Vin_min, full load
+  - [x] Vin_nominal, full load
+  - [x] Vin_max, full load
+  - [x] Vin_nominal, 50% load
+  - [x] Vin_nominal, light load (if controller supports it)
 
-- [ ] For each operating point, export key waveforms:
-  - [ ] Switch voltage (e.g. Vds)
-  - [ ] Switch current (Ids)
-  - [ ] Transformer / inductor current
-  - [ ] Output voltage and ripple
-  - [ ] Input current
+- [x] For each operating point, export key waveforms:
+  - [x] Switch voltage (e.g. Vds)
+  - [x] Switch current (Ids)
+  - [x] Transformer / inductor current
+  - [x] Output voltage and ripple
+  - [x] Input current
 
-- [ ] For each waveform, compute:
-  - [ ] Average value
-  - [ ] RMS value
-  - [ ] Peak and peak-to-peak
+- [x] For each waveform, compute:
+  - [x] Average value
+  - [x] RMS value
+  - [x] Peak and peak-to-peak
 
 ---
 
