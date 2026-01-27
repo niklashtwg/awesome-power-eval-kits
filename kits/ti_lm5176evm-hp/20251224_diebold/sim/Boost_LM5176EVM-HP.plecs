@@ -35,9 +35,9 @@ Plecs {
 "ency in Hz\nL1_DCR = 3.5e-3 % dc resistance L1\nL1_Cp = 33.4e-12\nQ1_Rdson = "
 "2.9e-3\nQ5_Rdson = 1e-3\nC_X7R_47 = 4.7e-3 % C of C2,3,4,5,32,33,34\nESR_X7R_"
 "47 = 0.0136\nC_X7R_22 = 22e-3 % C of C2,3,4,5,32,33,34\nESR_X7R_22 = 0.0029\n"
-"% voltage controller parameters\n\n%% Op-Amp\nR0 = 9e3;\nR1 = 85e3;\nC1 = 1.1"
-"e-9;\nR2 = 120e3;\nC2 = 2.7e-9;\nR4 = 47e3;\nVref_op_amp = Vref*R4/(R0+R1+R4)"
-";\n"
+"L1_losses = 0.119\n% voltage controller parameters\n\n%% Op-Amp\nR0 = 9e3;\nR"
+"1 = 85e3;\nC1 = 1.1e-9;\nR2 = 120e3;\nC2 = 2.7e-9;\nR4 = 47e3;\nVref_op_amp ="
+" Vref*R4/(R0+R1+R4);\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -62,7 +62,7 @@ Plecs {
   ScriptsDialogGeometry "[747 -704 454 272]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [276, -968; 1788, -165]
+    Location      [180, -916; 1692, -113]
     ZoomFactor    0.873846
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -1562,17 +1562,17 @@ Plecs {
     }
     Component {
       Type          Constant
-      Name          "Constant"
+      Name          "Load"
       Show          on
-      Position      [1645, 270]
+      Position      [1645, 305]
       Direction     left
       Flipped       off
       LabelPosition north
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "11"
-        Show          off
+        Value         "12"
+        Show          on
       }
       Parameter {
         Variable      "DataType"
@@ -1744,7 +1744,7 @@ Plecs {
           Type          From
           Name          "From9"
           Show          off
-          Position      [65, 135]
+          Position      [45, 135]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1768,7 +1768,7 @@ Plecs {
           Type          From
           Name          "From10"
           Show          off
-          Position      [65, 160]
+          Position      [45, 160]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1792,7 +1792,7 @@ Plecs {
           Type          Product
           Name          "Product"
           Show          off
-          Position      [120, 145]
+          Position      [100, 145]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -2417,6 +2417,55 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Constant
+          Name          "L1 Losses"
+          Show          on
+          Position      [90, 265]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "L1_losses"
+            Show          on
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Sum
+          Name          "Sum"
+          Show          off
+          Position      [135, 145]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "IconShape"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "|+-"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "11"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataTypeOverflowMode"
+            Value         "1"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Source\nPower"
@@ -2457,7 +2506,7 @@ Plecs {
           Type          Signal
           SrcComponent  "From9"
           SrcTerminal   1
-          Points        [85, 135; 85, 140]
+          Points        [65, 135; 65, 140]
           DstComponent  "Product"
           DstTerminal   2
         }
@@ -2465,7 +2514,7 @@ Plecs {
           Type          Signal
           SrcComponent  "From10"
           SrcTerminal   1
-          Points        [85, 160; 85, 150]
+          Points        [65, 160; 65, 150]
           DstComponent  "Product"
           DstTerminal   3
         }
@@ -2482,13 +2531,6 @@ Plecs {
             DstComponent  "Goto8"
             DstTerminal   1
           }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Product"
-          SrcTerminal   1
-          DstComponent  "Periodic Average1"
-          DstTerminal   2
         }
         Connection {
           Type          Signal
@@ -2671,6 +2713,28 @@ Plecs {
               DstTerminal   1
             }
           }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Product"
+          SrcTerminal   1
+          DstComponent  "Sum"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Sum"
+          SrcTerminal   1
+          DstComponent  "Periodic Average1"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "L1 Losses"
+          SrcTerminal   1
+          Points        [135, 265]
+          DstComponent  "Sum"
+          DstTerminal   3
         }
       }
     }
@@ -3668,20 +3732,6 @@ Plecs {
     }
     Component {
       Type          Resistor
-      Name          "L1_AC"
-      Show          on
-      Position      [845, 340]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "R"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Resistor
       Name          "Damp"
       Show          on
       Position      [825, 385]
@@ -3702,11 +3752,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      Probe {
-        Component     "L1_AC"
-        Path          ""
-        Signals       {"Resistor power"}
-      }
     }
     Component {
       Type          Display
@@ -5036,8 +5081,9 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant"
+      SrcComponent  "Load"
       SrcTerminal   1
+      Points        [1595, 305; 1595, 270]
       DstComponent  "I"
       DstTerminal   3
     }
@@ -5271,28 +5317,6 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "L1_DCR"
-      SrcTerminal   1
-      DstComponent  "L1_AC"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "L1_AC"
-      SrcTerminal   1
-      Points        [865, 340]
-      Branch {
-        DstComponent  "I_L"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [865, 385]
-        DstComponent  "Damp"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Wire
       SrcComponent  "L_Cp"
       SrcTerminal   2
       DstComponent  "Damp"
@@ -5384,6 +5408,21 @@ Plecs {
       Points        [265, 750; 265, 630]
       DstComponent  "Losses"
       DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "I_L"
+      SrcTerminal   1
+      Points        [865, 340]
+      Branch {
+        Points        [865, 385]
+        DstComponent  "Damp"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "L1_DCR"
+        DstTerminal   1
+      }
     }
   }
 }
