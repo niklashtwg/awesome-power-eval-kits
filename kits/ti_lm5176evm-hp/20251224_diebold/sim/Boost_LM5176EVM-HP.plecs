@@ -62,7 +62,7 @@ Plecs {
   ScriptsDialogGeometry "[747 -704 454 272]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [180, -916; 1692, -113]
+    Location      [524, 53; 2036, 856]
     ZoomFactor    0.873846
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -1571,7 +1571,7 @@ Plecs {
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "12"
+        Value         "11"
         Show          on
       }
       Parameter {
@@ -2959,15 +2959,15 @@ Plecs {
       Location      [260, 153; 1215, 875]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAALiAAACJvwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAANQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAACsAA"
-"ACJgAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAIAAAO7AAABSvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAFrAAAA"
+"ACJgAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAIAAAO7AAACtvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAMAFYAaQBlAHcAIAAxP5Koxg+Obio/kqxveDUE/QAAA"
 "AUAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAA"
 "AAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":209,\"Labels\":["
-"\"Delta\",\"Min\",\"Max\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,5,6,8,9]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":209,\"Labels\":[\""
+"Delta\",\"Min\",\"Max\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,5,6,8,9]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -3740,7 +3740,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "R"
-        Value         "20"
+        Value         "0.1"
         Show          on
       }
     }
@@ -3777,22 +3777,24 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [305, 285]
+      Position      [295, 330]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [335, 66; 1290, 788]
+      Location      [443, -915; 1398, -193]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABwPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAAA1/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAHeAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":198,\"Labels\":["
 "\"Min\",\"Max\",\"RMS\"],\"VisualIdxs\":[5,6,9]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"=="
+      Axes          "3"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -3812,12 +3814,54 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis       on
         AxisLabel         "Frequency / Hz"
         Scaling           0
         PhaseDisplay      0
         ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -3841,179 +3885,35 @@ Plecs {
       Probe {
         Component     "ESR2"
         Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR3"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR4"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR5"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR32"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR33"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR34"
-        Path          ""
-        Signals       {"Resistor current"}
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
       Type          PlecsProbe
       Name          "C6 Probe"
       Show          on
-      Position      [185, 360]
+      Position      [185, 330]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "ESR6"
         Path          ""
-        Signals       {"Resistor current"}
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope3"
-      Show          on
-      Position      [305, 360]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [361, -1027; 1316, -305]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAAAZPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAJRAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":187,\"Labels\":["
-"\"Min\",\"Max\",\"RMS\"],\"VisualIdxs\":[5,6,9]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
       Type          PlecsProbe
       Name          "C13 Probe"
       Show          on
-      Position      [185, 430]
+      Position      [185, 370]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "ESR13"
         Path          ""
-        Signals       {"Resistor current"}
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope4"
-      Show          on
-      Position      [305, 430]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [682, -970; 1637, -248]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAAAZPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAJRAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":187,\"Labels\":["
-"\"Min\",\"Max\",\"RMS\"],\"VisualIdxs\":[5,6,9]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
@@ -5333,21 +5233,8 @@ Plecs {
       Type          Signal
       SrcComponent  "C2 Probe"
       SrcTerminal   1
+      Points        [245, 285; 245, 320]
       DstComponent  "Scope2"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "C6 Probe"
-      SrcTerminal   1
-      DstComponent  "Scope3"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "C13 Probe"
-      SrcTerminal   1
-      DstComponent  "Scope4"
       DstTerminal   1
     }
     Connection {
@@ -5423,6 +5310,21 @@ Plecs {
         DstComponent  "L1_DCR"
         DstTerminal   1
       }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "C6 Probe"
+      SrcTerminal   1
+      DstComponent  "Scope2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "C13 Probe"
+      SrcTerminal   1
+      Points        [255, 370; 255, 340]
+      DstComponent  "Scope2"
+      DstTerminal   3
     }
   }
 }

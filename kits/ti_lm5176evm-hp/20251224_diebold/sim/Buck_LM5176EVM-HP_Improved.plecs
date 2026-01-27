@@ -1,5 +1,5 @@
 Plecs {
-  Name          "BuckBoost_LM5176EVM-HP_2"
+  Name          "Buck_LM5176EVM-HP_Improved"
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -28,16 +28,16 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "% circuit parameters\n\nVin = 12;         % input vo"
+  InitializationCommands "% circuit parameters\n\nVin = 36;         % input vo"
 "ltage in V\nVref = 12;        % desired output voltage in V%\n%Lo = 100e-6;  "
 "    % ouput inductance in H\n%Co = 100e-6;      % output capacitance in F\nRL"
-" = 0;           % load resistance in Ohms\nfsw = 250e3;      % switching freq"
+" = 0;           % load resistance in Ohms\nfsw = 100e3;      % switching freq"
 "uency in Hz\nL1_DCR = 3.5e-3 % dc resistance L1\nL1_Cp = 33.4e-12\nQ1_Rdson ="
 " 2.9e-3\nQ5_Rdson = 1e-3\nC_X7R_47 = 4.7e-3 % C of C2,3,4,5,32,33,34\nESR_X7R"
 "_47 = 0.0136\nC_X7R_22 = 22e-3 % C of C2,3,4,5,32,33,34\nESR_X7R_22 = 0.0029"
-"\n\n\nL1_losses = 0.911\n% voltage controller parameters\n\n%% Op-Amp\nR0 = 9"
-"e3;\nR1 = 85e3;\nC1 = 1.1e-9;\nR2 = 120e3;\nC2 = 2.7e-9;\nR4 = 47e3;\nVref_op"
-"_amp = Vref*R4/(R0+R1+R4);\n"
+"\nL1_losses = 0.77\n% voltage controller parameters\n\n%% Op-Amp\nR0 = 9e3;\n"
+"R1 = 85e3;\nC1 = 1.1e-9;\nR2 = 120e3;\nC2 = 2.7e-9;\nR4 = 47e3;\nVref_op_amp "
+"= Vref*R4/(R0+R1+R4);\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -62,7 +62,7 @@ Plecs {
   ScriptsDialogGeometry "[747 -704 454 272]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [23, -964; 1535, -161]
+    Location      [239, -862; 1751, -59]
     ZoomFactor    0.873846
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -718,7 +718,7 @@ Plecs {
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "0.5"
+        Value         "0.34"
         Show          on
       }
       Parameter {
@@ -731,7 +731,7 @@ Plecs {
       Type          Display
       Name          "Electrical\nEfficiency"
       Show          on
-      Position      [1515, 605]
+      Position      [1450, 605]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -784,7 +784,7 @@ Plecs {
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":209,\"Labels\":["
-"\"Mean\"],\"VisualIdxs\":[8]}"
+"],\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -1562,9 +1562,9 @@ Plecs {
     }
     Component {
       Type          Constant
-      Name          "Load"
+      Name          "Constant"
       Show          on
-      Position      [1670, 290]
+      Position      [1650, 305]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1572,7 +1572,7 @@ Plecs {
       Parameter {
         Variable      "Value"
         Value         "12"
-        Show          on
+        Show          off
       }
       Parameter {
         Variable      "DataType"
@@ -2421,7 +2421,7 @@ Plecs {
           Type          Constant
           Name          "L1 Losses"
           Show          on
-          Position      [120, 250]
+          Position      [85, 230]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2441,7 +2441,7 @@ Plecs {
           Type          Sum
           Name          "Sum"
           Show          off
-          Position      [140, 145]
+          Position      [135, 145]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -2732,7 +2732,7 @@ Plecs {
           Type          Signal
           SrcComponent  "L1 Losses"
           SrcTerminal   1
-          Points        [140, 250]
+          Points        [135, 230]
           DstComponent  "Sum"
           DstTerminal   3
         }
@@ -2956,10 +2956,10 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [251, 117; 1206, 839]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAALiAAABa/wCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAFnAA"
-"ABawAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAABZwAAAWsAAABmAP///wAAAAIAAAO7AAACtvw"
+      Location      [432, 66; 1387, 788]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAALiAAACJvwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAACsAA"
+"ACJgAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAABZwAAAWsAAABmAP///wAAAAIAAAO7AAACtvw"
 "BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
@@ -2968,12 +2968,12 @@ Plecs {
 "AAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGABTAGEAdgB"
 "lAGQAIAB2AGkAZQB3ACAAMQAAAAAAAAAAP5R64UeuFHsAAAAFAH/4AAAAAAAAf/gAAAAAAAAAf/gA"
 "AAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAAAAAAB/+"
-"AAAAAAAAAE/e06Kp45O5T+LTnsk1WBGAAAAABgAUwBhAHYAZQBkACAAdgBpAGUAdwAgADIAAAAAAA"
+"AAAAAAAAAE/kmVCefgToj+Sq+8Gs3hoAAAAABgAUwBhAHYAZQBkACAAdgBpAGUAdwAgADIAAAAAAA"
 "AAAD+UeuFHrhR7AAAABQB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAAAAAAB"
-"/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAABP3tOiqeOTuU/i057JNVg"
-"RgA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":209,\"Labels\":["
-"\"Delta\",\"Min\",\"Max\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,5,6,8,9]}"
+"/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAABP5JlQnn4E6I/kqvvBrN4"
+"aAA="
+      HeaderState   "{\"DefaultSecSize\":102,\"FirstSecSize\":209,\"Labels\":["
+"\"Min\",\"Max\",\"Mean\",\"RMS\"],\"VisualIdxs\":[5,6,8,9]}"
       PlotPalettes  "AAAAAQAAAAQAAAABAAAABAAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
 "/8AAAAAAAEC//9PsP////8AAAAAAAEC//8SwP////8AAAAAAAQAAAABAAAAAAEAAAAAAQAAAAABAA"
 "AAAAQAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAQAAAABAAAAAAEAAAAAAQAAAAA"
@@ -3111,16 +3111,16 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [281, 180; 1236, 902]
+      Location      [281, 185; 1236, 907]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABnvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAAA+AP///wAAA7sAAAK2AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":187,\"Labels\":["
-"],\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":187,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -3562,6 +3562,20 @@ Plecs {
     }
     Component {
       Type          Resistor
+      Name          "L1_AC"
+      Show          on
+      Position      [845, 340]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "0.014"
+        Show          on
+      }
+    }
+    Component {
+      Type          Resistor
       Name          "Damp"
       Show          on
       Position      [825, 385]
@@ -3582,6 +3596,190 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      Probe {
+        Component     "L1_AC"
+        Path          ""
+        Signals       {"Resistor power"}
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator1"
+      Show          off
+      Position      [630, 665]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "On1"
+      Show          on
+      Position      [640, 710]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Off1"
+      Show          on
+      Position      [640, 750]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto9"
+      Show          off
+      Position      [765, 625]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Q1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto10"
+      Show          off
+      Position      [765, 665]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Q3"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto11"
+      Show          off
+      Position      [765, 710]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Q5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto12"
+      Show          off
+      Position      [765, 750]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Q7"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From19"
+      Show          off
+      Position      [545, 665]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
     }
     Component {
       Type          Scope
@@ -3591,7 +3789,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [281, 183; 1236, 905]
+      Location      [281, 185; 1236, 907]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABjfw"
@@ -3641,157 +3839,18 @@ Plecs {
       }
     }
     Component {
-      Type          LogicalOperator
-      Name          "Logical\nOperator"
-      Show          off
-      Position      [715, 650]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Operator"
-        Value         "6"
-        Show          off
-      }
-      Parameter {
-        Variable      "Inputs"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto1"
-      Show          off
-      Position      [770, 610]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "Q1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto2"
-      Show          off
-      Position      [770, 650]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "Q3"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto3"
-      Show          off
-      Position      [770, 695]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "Q5"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto4"
-      Show          off
-      Position      [770, 735]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "Q7"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From6"
-      Show          off
-      Position      [635, 650]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "PWM"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [320, 490]
+      Position      [370, 345]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [454, 66; 1409, 788]
+      Location      [605, -916; 1560, -194]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABz/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAAA1/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAHeAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3882,74 +3941,44 @@ Plecs {
     }
     Component {
       Type          PlecsProbe
-      Name          "C2 Probe"
+      Name          "C2Probe"
       Show          on
-      Position      [200, 450]
+      Position      [220, 275]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "ESR2"
         Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR3"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR4"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR5"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR32"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR33"
-        Path          ""
-        Signals       {"Resistor current"}
-      }
-      Probe {
-        Component     "ESR34"
-        Path          ""
-        Signals       {"Resistor current"}
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
       Type          PlecsProbe
       Name          "C6 Probe"
       Show          on
-      Position      [200, 490]
+      Position      [220, 350]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "ESR6"
         Path          ""
-        Signals       {"Resistor current"}
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
       Type          PlecsProbe
       Name          "C13 Probe"
       Show          on
-      Position      [200, 530]
+      Position      [220, 420]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "ESR13"
         Path          ""
-        Signals       {"Resistor current"}
+        Signals       {"Resistor voltage", "Resistor current"}
       }
     }
     Component {
@@ -3984,7 +4013,7 @@ Plecs {
     }
     Component {
       Type          From
-      Name          "From19"
+      Name          "From20"
       Show          off
       Position      [1070, 715]
       Direction     right
@@ -4008,7 +4037,7 @@ Plecs {
     }
     Component {
       Type          From
-      Name          "From20"
+      Name          "From21"
       Show          off
       Position      [1070, 675]
       Direction     right
@@ -4032,7 +4061,7 @@ Plecs {
     }
     Component {
       Type          From
-      Name          "From21"
+      Name          "From22"
       Show          off
       Position      [1070, 755]
       Direction     right
@@ -4056,7 +4085,7 @@ Plecs {
     }
     Component {
       Type          From
-      Name          "From22"
+      Name          "From23"
       Show          off
       Position      [1070, 795]
       Direction     right
@@ -4170,9 +4199,9 @@ Plecs {
     }
     Component {
       Type          SwitchLossCalculator
-      Name          "Q1 BuckBoost"
+      Name          "Q1 Buck"
       Show          on
-      Position      [110, 600]
+      Position      [205, 580]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4221,15 +4250,15 @@ Plecs {
       Type          Scope
       Name          "Losses"
       Show          on
-      Position      [320, 675]
+      Position      [415, 655]
       Direction     up
       Flipped       off
       LabelPosition south
       Location      [244, 118; 1199, 840]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAALiAAACEfwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAcAA"
-"ACEQAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAACAfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA7sAAABCAP///wAAA7sAAAAAAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAcAA"
+"ACEQAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAO7AAABTPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA7sAAABCAP///wAAA7sAAAK2AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAEIAZQB0AHQAZQByACAATABpAG4AZQBzAAAAAAAAA"
@@ -4357,9 +4386,9 @@ Plecs {
     }
     Component {
       Type          SwitchLossCalculator
-      Name          "Q3 BuckBoost"
+      Name          "Q3 Buck"
       Show          on
-      Position      [110, 670]
+      Position      [205, 650]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4406,9 +4435,9 @@ Plecs {
     }
     Component {
       Type          SwitchLossCalculator
-      Name          "Q5 BuckBoost"
+      Name          "Q5 Buck"
       Show          on
-      Position      [110, 740]
+      Position      [205, 720]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4455,9 +4484,9 @@ Plecs {
     }
     Component {
       Type          SwitchLossCalculator
-      Name          "Q7 BuckBoost"
+      Name          "Q7 Buck"
       Show          on
-      Position      [110, 810]
+      Position      [205, 790]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4974,6 +5003,13 @@ Plecs {
     }
     Connection {
       Type          Signal
+      SrcComponent  "Turn-on Delay1"
+      SrcTerminal   2
+      DstComponent  "Q3"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
       DstComponent  "Turn-on Delay"
@@ -5010,9 +5046,9 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Load"
+      SrcComponent  "Constant"
       SrcTerminal   1
-      Points        [1610, 290; 1610, 270]
+      Points        [1595, 305; 1595, 270]
       DstComponent  "I"
       DstTerminal   3
     }
@@ -5210,10 +5246,68 @@ Plecs {
     }
     Connection {
       Type          Wire
+      SrcComponent  "L1_DCR"
+      SrcTerminal   1
+      DstComponent  "L1_AC"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L1_AC"
+      SrcTerminal   1
+      Points        [865, 340]
+      Branch {
+        DstComponent  "I_L"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [865, 385]
+        DstComponent  "Damp"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
       SrcComponent  "L_Cp"
       SrcTerminal   2
       DstComponent  "Damp"
       DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "On1"
+      SrcTerminal   1
+      DstComponent  "Goto11"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Logical\nOperator1"
+      SrcTerminal   1
+      DstComponent  "Goto10"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From19"
+      SrcTerminal   1
+      Points        [585, 665]
+      Branch {
+        DstComponent  "Logical\nOperator1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [585, 625]
+        DstComponent  "Goto9"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Off1"
+      SrcTerminal   1
+      DstComponent  "Goto12"
+      DstTerminal   1
     }
     Connection {
       Type          Signal
@@ -5224,79 +5318,76 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "From6"
+      SrcComponent  "C2Probe"
       SrcTerminal   1
-      Points        [665, 650]
-      Branch {
-        DstComponent  "Logical\nOperator"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [665, 735]
-        DstComponent  "Goto4"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [665, 610]
-        DstComponent  "Goto1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Logical\nOperator"
-      SrcTerminal   1
-      Points        [745, 650]
-      Branch {
-        DstComponent  "Goto2"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [745, 695]
-        DstComponent  "Goto3"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "C2 Probe"
-      SrcTerminal   1
-      Points        [260, 450; 260, 480]
+      Points        [280, 275; 280, 335]
       DstComponent  "Scope2"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From20"
-      SrcTerminal   1
-      DstComponent  "To File"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From19"
-      SrcTerminal   1
-      DstComponent  "To File1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
       SrcComponent  "From21"
       SrcTerminal   1
-      DstComponent  "To File2"
+      DstComponent  "To File"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From20"
+      SrcTerminal   1
+      DstComponent  "To File1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
       SrcComponent  "From22"
       SrcTerminal   1
+      DstComponent  "To File2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From23"
+      SrcTerminal   1
       DstComponent  "To File3"
       DstTerminal   1
     }
     Connection {
       Type          Signal
+      SrcComponent  "Q1 Buck"
+      SrcTerminal   1
+      Points        [305, 580; 305, 640]
+      DstComponent  "Losses"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Q3 Buck"
+      SrcTerminal   1
+      DstComponent  "Losses"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Q5 Buck"
+      SrcTerminal   1
+      Points        [310, 720; 310, 660]
+      DstComponent  "Losses"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Q7 Buck"
+      SrcTerminal   1
+      Points        [315, 790; 315, 670]
+      DstComponent  "Losses"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Signal
       SrcComponent  "C6 Probe"
       SrcTerminal   1
+      Points        [285, 350; 285, 345]
       DstComponent  "Scope2"
       DstTerminal   2
     }
@@ -5304,62 +5395,9 @@ Plecs {
       Type          Signal
       SrcComponent  "C13 Probe"
       SrcTerminal   1
-      Points        [270, 530; 270, 500]
+      Points        [290, 420; 290, 355]
       DstComponent  "Scope2"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Turn-on Delay1"
-      SrcTerminal   2
-      DstComponent  "Q3"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Q1 BuckBoost"
-      SrcTerminal   1
-      Points        [210, 600; 210, 660]
-      DstComponent  "Losses"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Q3 BuckBoost"
-      SrcTerminal   1
-      DstComponent  "Losses"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Q5 BuckBoost"
-      SrcTerminal   1
-      Points        [215, 740; 215, 680]
-      DstComponent  "Losses"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Q7 BuckBoost"
-      SrcTerminal   1
-      Points        [220, 810; 220, 690]
-      DstComponent  "Losses"
-      DstTerminal   4
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "I_L"
-      SrcTerminal   1
-      Points        [865, 340]
-      Branch {
-        Points        [865, 385]
-        DstComponent  "Damp"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "L1_DCR"
-        DstTerminal   1
-      }
     }
   }
 }

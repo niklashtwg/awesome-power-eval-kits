@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-name = "BuckBoost"
+name = "BuckNoDamp"
 type = "Vo"
 
 # 1. Daten laden (Annahme: Spalte 0 ist Zeit, Spalte 1 ist Strom/Spannung)
